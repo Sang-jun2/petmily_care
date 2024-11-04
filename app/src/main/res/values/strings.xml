@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Petmily Care</string>
+    <string name="register_photo_title">사진을 등록해주세요</string>
+    <string name="btn_diagnose">진단하기</string>
+    <string name="diagnosis_result">병명:</string>
+    <string name="definition">정의:</string>
+    <string name="cause">원인:</string>
+    <string name="hospital_examination">병원 검사:</string>
+    <string name="home_care_tips">홈 케어 예방법:</string>
+    <string name="registered_photo">등록된 사진</string>
+    <string name="image_pet_description"> </string>
+    <string name="photo_register">사진을 등록해주세요</string>
+    <string name="button_capture">사진 촬영</string>
+    <string name="button_select">사진 선택</string>
+    <string name="button_register">사진 등록</string>
+</resources>
