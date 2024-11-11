@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavTextBold" parent="TextAppearance.AppCompat.Caption">
+        <item name="itemIconSize">30dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="itemPaddingTop">16dp</item>
+        <item name="itemPaddingBottom">16dp</item>
+    </style>
+
+</resources>

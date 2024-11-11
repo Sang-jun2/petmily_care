@@ -10,10 +10,9 @@
     <!-- 반려동물 이미지 -->
     <ImageView
         android:id="@+id/image_pet"
-        android:layout_width="243dp"
-        android:layout_height="230dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
-        android:contentDescription="@string/image_pet_description"
         android:src="@drawable/app_main_image" />
 
     <!-- 텍스트 설명 -->
@@ -65,5 +64,7 @@
         android:background="@drawable/btn_color"
         android:textSize="30sp"
         android:text="@string/button_register" />
+
+
 
 </LinearLayout>

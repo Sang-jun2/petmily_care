@@ -36,6 +36,12 @@
             android:name=".PhotoRegisterActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".ListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".CompareActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 
