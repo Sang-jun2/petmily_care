@@ -8,4 +8,10 @@
         <item name="itemPaddingBottom">16dp</item>
     </style>
 
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 상태 표시줄 아이콘을 검은색으로 설정 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
 </resources>

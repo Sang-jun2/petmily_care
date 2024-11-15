@@ -3,31 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:background="#FFE5CC">
-
-    <!-- 상단의 안내 텍스트뷰 -->
-    <TextView
-        android:id="@+id/registerPhotoTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_register"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textColor="#000000" />
 
     <!-- 사진 등록된 이미지를 보여주는 이미지 뷰 -->
     <ImageView
         android:id="@+id/registeredPhoto"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_below="@id/registerPhotoTitle"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/registered_photo"
-        android:background="@android:color/white"/>
+        android:background="@android:color/white"
+        android:src="@drawable/eye_diagnose"
+        android:scaleType="fitXY"/>
 
     <!-- 질환 유형 선택 라디오 그룹 -->
     <RadioGroup
@@ -87,7 +75,7 @@
             android:id="@+id/diagnosisResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/diagnosis_result"
+            android:text="병명 : "
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -96,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/definition"
+            android:text="정의 : "
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -105,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/cause"
+            android:text="원인 : "
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -114,7 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/hospital_examination"
+            android:text="병원 검사 : "
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -123,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/home_care_tips"
+            android:text="홈 케어 예방법 : "
             android:textColor="#000000"
             android:textSize="20sp" />
     </LinearLayout>
@@ -134,18 +122,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:elevation="8dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
         android:background="#FFCCCC"
         android:gravity="center"
         android:textAlignment="center"
         app:itemIconSize="26dp"
-        app:itemPaddingBottom="4dp"
-        app:itemPaddingTop="4dp"
+        app:itemPaddingBottom="6dp"
+        app:itemPaddingTop="6dp"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_navigation_menu" />
-
 
 </RelativeLayout>
 

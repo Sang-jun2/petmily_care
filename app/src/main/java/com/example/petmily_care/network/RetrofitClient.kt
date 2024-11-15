@@ -6,8 +6,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitClient {
     private const val BASE_URL = "http://127.0.0.1:5000/"  // Flask 서버 주소
 
-    val instance: Retrofit by lazy {
-        Retrofit.Builder()
+    fun getClient(): Retrofit {
+        return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

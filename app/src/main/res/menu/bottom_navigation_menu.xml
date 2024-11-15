@@ -16,7 +16,7 @@
         android:title="@string/nav_history" />
 
     <item
-        android:id="@+id/nav_compare"
-        android:icon="@drawable/ic_compare"
-        android:title="@string/nav_compare" />
+        android:id="@+id/nav_chatbot"
+        android:icon="@drawable/ic_chatbot"
+        android:title="@string/nav_chatbot" />
 </menu>

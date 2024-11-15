@@ -40,7 +40,7 @@
             android:name=".ListActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".CompareActivity"
+            android:name=".ChatbotActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 

@@ -53,15 +53,17 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
     fun getAllDiagnosisRecords(): List<DiagnosisRecord> {
         val diagnosisRecords = mutableListOf<DiagnosisRecord>()
         val db = this.readableDatabase
-        val cursor: Cursor = db.rawQuery("SELECT $COLUMN_DIAGNOSIS_DATE, $COLUMN_DISEASE_NAME, $COLUMN_CAUSE FROM $TABLE_NAME", null)
+        val cursor: Cursor = db.rawQuery("SELECT $COLUMN_IMAGE_PATH, $COLUMN_DIAGNOSIS_DATE, $COLUMN_DISEASE_NAME, $COLUMN_CAUSE FROM $TABLE_NAME", null)
 
         if (cursor.moveToFirst()) {
             do {
+                val imagePath = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_IMAGE_PATH))
                 val diagnosisDate = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DIAGNOSIS_DATE))
                 val diseaseName = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DISEASE_NAME))
                 val cause = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CAUSE))
 
                 val diagnosisRecord = DiagnosisRecord(
+                    imageUri = imagePath,  // 수정된 부분: imageUri 추가
                     date = diagnosisDate,
                     diseaseName = diseaseName,
                     cause = cause

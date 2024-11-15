@@ -17,7 +17,7 @@ class ListActivity : AppCompatActivity() {
     // 액티비티의 onCreate에서 설정하는 부분
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.list_layout)
+        setContentView(R.layout.activity_diagnosis_record)
 
         // DBHelper 인스턴스 초기화
         dbHelper = DBHelper(this)
@@ -48,11 +48,12 @@ class ListActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_history -> {
-                    // 현재 액티비티이므로 새로 시작할 필요 없음
+                    val intent = Intent(this, ListActivity::class.java)
+                    startActivity(intent)
                     true
                 }
-                R.id.nav_compare -> {
-                    val intent = Intent(this, CompareActivity::class.java)
+                R.id.nav_chatbot-> {
+                    val intent = Intent(this, ChatbotActivity::class.java)
                     startActivity(intent)
                     true
                 }
