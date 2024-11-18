@@ -1,13 +1,16 @@
 import io
+import os
+import numpy as np
 from PIL import Image
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, HTTPException
 
 import tensorflow as tf
 from server.app.preprocess import preprocess_image
 from server.app.database import get_db_connection
 
 app = FastAPI()
-eye_model_path = r"C:\Users\admin\Desktop\최종프로젝트\가중치 파일\model_resnet50_172.keras"
+eye_model_path = "resources/model_resnet50_172.keras"
+
 eye_model = tf.keras.models.load_model(eye_model_path)
 
 @app.get("/")
@@ -37,8 +40,6 @@ async def predict(file: UploadFile = File()):
 
     image = io.BytesIO(file_bytes)
     img_array = preprocess_image(image)
-    print(img_array)
-    return "hi"
 
     # 2. 모델 예측 수행
     prediction = eye_model.predict(img_array)
@@ -61,3 +62,10 @@ async def predict(file: UploadFile = File()):
         '병원 검사': disease_info['병원_검사'],
         '집에서의 관리법': disease_info['집에서의_관리법']
     }
+
+
+if __name__ == '__main__':
+    import uvicorn
+
+    uvicorn.run(app, host='0.0.0.0', port=8000)
+

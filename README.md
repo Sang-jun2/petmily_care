@@ -7,5 +7,6 @@ uvicorn server.app.main:app --reload --host 0.0.0.0 --port 8000
 
 패키지 설치
 ```shell
+pip install -r requirements.txt
 pip install {패키지명}
 ```
