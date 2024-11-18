@@ -1,7 +1,6 @@
 from PIL import Image
 import numpy as np
 
-
 def preprocess_image(image, target_size=(224, 224)):
     try:
         img = Image.open(image)
